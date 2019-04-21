@@ -1,0 +1,101 @@
+.container-dashboard {
+
+  width: 850px;
+  height:700px;
+  margin-left: 280px;
+  margin-top: 125px;
+}
+
+.tabs {
+  display:flex;
+
+}
+
+h3 {
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 0px;
+}
+
+
+h4, a {
+  text-decoration: none;
+  font-family: 'Brown', sans-serif;
+  color: #282828;
+}
+
+a{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a:hover {
+    color: #282828;
+    text-decoration: none;
+}
+
+.dogs {
+  display:flex;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  border-radius: 4px;
+  margin-bottom: 15px;
+
+}
+
+.dog_card {
+background-size: cover;
+  width:300px;
+  height:300px;
+  background-position: center ;
+  position:relative;
+  border: 5px solid;
+  border-color: #DFF527;
+                         /* Small radius */
+
+}
+
+.dog_stat {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.dog_info h4 {
+  color:white;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 3px 2px;
+
+}
+
+.dog_info {
+  position:absolute;
+  top:15px;
+  left:15px;
+}
+
+#container{
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+
+}
+
+.stats {
+  width: 360px;
+
+}
+
+.dog_stat_info{
+  text-align: center;
+}
+
+.deselected {
+  font-weight: normal;
+}
+
+.left {
+
+  margin-left: 40px;
+}
+

@@ -1,0 +1,41 @@
+<div class="container-dashboard">
+  <h3>My classes</h3>
+  <div class="tabs">
+    <h4><%=link_to"(#{current_user.upcoming_classes.size}) Upcoming", upcoming_classes_path %></h4>
+    <h4 class="left deselected"><%=link_to"(#{current_user.completed_classes.size}) Completed", completed_classes_path %></h4>
+
+  </div>
+    <div class="cards">
+  <% @classes.each do |classe| %>
+    <div class="card <%=classe.id%>">
+      <div class="info">
+        <h4><%=classe.session.activity.name %></h4>
+        <p><%=classe.session.place%></p>
+        <p><%=classe.session.coach%></p>
+        <p><%=classe.session.schedule%></p>
+      </div>
+    <div>
+      <!-- add a link to with method delete -->
+      <%= link_to delete_booking_path(classe) , method: :delete, remote: true, class: "destroy_link #{classe.id}" do %>
+        <button class="but contrast">Annuler</button>
+      <%end%>
+    </div>
+  </div>
+      <% end %>
+</div>
+</div>
+
+<div id="myModal" class="modal in">
+  <p>hey</p>
+</div>
+
+<script>
+  btn = document.querySelector(".destroy_link")
+  btn.addEventListener("click", function(){
+    console.log("hey")
+    class_id = btn.className.match(/\d+/g).map(Number)[0].toString()
+    child = document.getElementsByClassName(class_id)[0]
+    parent = document.querySelector(".cards")
+    parent.removeChild(child)
+  });
+</script>

@@ -1,0 +1,32 @@
+<div class="container-dashboard">
+  <h3>My classes</h3>
+  <div class="tabs">
+    <h4 class= "deselected"><%=link_to"(#{current_user.upcoming_classes.size}) Upcoming", upcoming_classes_path %></h4>
+    <h4 class="left"><%=link_to"(#{current_user.completed_classes.size}) Completed", completed_classes_path %></h4>
+  </div>
+    <div class="cards">
+  <% @classes.each do |classe| %>
+    <div class="card">
+      <div class="info">
+        <h4><%=classe.session.activity.name %></h4>
+        <p><%=classe.session.place%></p>
+        <p><%=classe.session.coach%></p>
+        <p><%=classe.session.schedule%></p>
+      </div>
+    <div class="action">
+      <p>completed</p>
+    </div>
+  </div>
+      <% end %>
+</div>
+</div>
+
+<div id="myModal" class="modal in">
+  <p>Ok I hope to see you next time</p>
+</div>
+</div>
+
+<script>
+// should add a confirmaiton message quand tannules
+</script>
+

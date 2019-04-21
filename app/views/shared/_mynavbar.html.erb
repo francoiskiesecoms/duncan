@@ -1,0 +1,43 @@
+<div class = 'navbar sticky'>
+  <div id='logo'>
+    <%= link_to root_path do  %>
+      <%= image_tag "track.png", width:"60px" %>
+    <%end%>
+
+    <span class = "text_navbar name"> Duncan, le chien de famille que tout le monde adore</span>
+  </div>
+  <div id ='nav_content'>
+    <% if user_signed_in? %>
+      <%= link_to dashboard_dogs_path do %>
+        <button class= 'but'>Dashboard</button>
+      <%end%>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <button class= 'but contrast'>Sign out</button>
+      <% end %>
+    <%else%>
+      <%= link_to dashboard_dogs_path do %>
+        <button class= 'but'>Se connecter</button>
+      <%end%>
+      <button class= 'but contrast'>Cours gratuit</button>
+    <%end%>
+  </div>
+</div>
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>

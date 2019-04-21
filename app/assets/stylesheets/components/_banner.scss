@@ -1,0 +1,36 @@
+.banner {
+  height: 587px;
+  background-size: cover !important;
+  background-color: black;
+  color: white;
+  // font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 3px 2px;
+  font-size: 6em;
+  letter-spacing: -1px;
+  line-height: 0.95;
+  margin-top: 80px;
+}
+
+.banner p {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 40px;
+}
+
+.header {
+  position: absolute;
+  top: 50px;
+  left: 120px;
+  max-width: 700px;
+}
+

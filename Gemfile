@@ -8,6 +8,8 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
@@ -15,6 +17,11 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'bootstrap-datepicker-rails'
+gem 'momentjs-rails', '>= 2.9'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

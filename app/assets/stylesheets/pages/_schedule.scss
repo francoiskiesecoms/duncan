@@ -1,0 +1,53 @@
+td {
+  padding-right: 60px;
+  padding-bottom: 25px;
+  font-size: 1.1em;
+  color: rgb(119, 119, 119);
+}
+
+.bold {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.book {
+
+  margin-bottom: 20px;
+  margin-left: 0px;
+
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.new_booking, .new_dog {
+  width: 300px;
+  top: 40px;
+  position: absolute;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#booking_dog, #booking_class {
+  // design drop down list
+  font-family: Brown;
+  font-size:18px;
+}
+
+label {
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 0px;
+  font-size: 36px;
+}
+
+.small {
+  height:400px;
+  max-width: 410px;
+}

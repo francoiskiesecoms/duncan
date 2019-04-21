@@ -1,0 +1,47 @@
+<%= render 'shared/banner' %>
+
+<div class="container">
+  <h4 class="try">Essaie un cours gratuit</h4>
+  <div class="cards">
+    <% Session.this_week.each do |session| %>
+    <div class="card">
+    <div class="info">
+      <h4><%=session.activity.name %></h4>
+      <p><%=session.place%></p>
+      <p><%=session.coach%></p>
+      <p><%=session.schedule %></p>
+    </div>
+    <div class="action">
+      <%= link_to new_user_registration_path do %>
+        <button type="button" id="open_button">Essayer un cours gratuit</button>
+      <%end%>
+    </div>
+  </div>
+  <% end %>
+  </div>
+
+  <div id="myModal" class="modal in">
+  <div id="myform" class="form-login">
+    <div class="header-form">
+      <h2> Your information</h2>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  button = document.querySelector("#open_button");
+  button.addEventListener("click", function(){
+});
+</script>
+
+
+
+
+
+
+
+
+
+

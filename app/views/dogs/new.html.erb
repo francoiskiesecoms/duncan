@@ -1,0 +1,68 @@
+<div class="container-dashboard">
+  <h3>My dogs</h3>
+  <button class= 'but book' type="button" data-toggle="modal" data-target="#myModal">Register a dog</button>
+
+  <%if @dogs.size == 0 %>
+    <h4>please register a dog</h4>
+
+  <%else%>
+    <% @dogs.each do |dog| %>
+      <div class="dogs">
+        <%if dog.photo?%>
+          <div class="dog_card" style="background-image: linear-gradient(-225deg, rgba(10,10,10,0.3) 100%, rgba(100,100,100,0.0) 100%), url('<%= dog.photo %>');">
+          </div>
+        <%else%>
+      <div class="dog_card" style="background-image: linear-gradient(-225deg, rgba(10,10,10,0.3) 100%, rgba(100,100,100,0.0) 100%), url('/assets/dog.png');">
+        <button type="button" data-toggle="modal" data-target="
+        .photo-<%= dog.id %>" >Photo</button>
+      </div>
+        <%end%>
+        <div class="dog_stat">
+          <div class="dog_stat_info">
+            <h4><%=dog.name%>' experience</h4>
+            <i>based on age and completed classes</i>
+          </div>
+          <div id="container_<%=dog.id%>" class="stats">
+             <%= render 'dogs/partial', dog: dog %>
+          </div>
+        </div>
+
+        <!-- modal -->
+        <div id="myModal" class="modal in photo-<%= dog.id %>" style ="max-width: 410px;height:400px">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <%= simple_form_for(dog) do |f| %>
+            <!-- [...] -->
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+            <!-- [...] -->
+            <%= f.submit %>
+          <% end %>
+        </div>
+
+      </div>
+    <%end%>
+
+  <% end %>
+</div>
+<div id="myModal" class="modal in" style ="max-width: 410px;height:400px">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <%= form_for @dog do |f| %>
+      <div class="form-group">
+        <%= f.label :name%>
+        <%= f.text_field :name%>
+      </div>
+      <div class="form-group">
+        <%= f.label :date_of_birth%>
+        <%= f.text_field :date_of_birth, :data => {:provide => "datepicker"} , class: 'date-picker form-control' %>
+      </div>
+  <%= f.submit "Add a dog", class: 'but book' %>
+
+<% end %>
+</div>
+
+<script>
+
+    document.querySelector(".new_dog").addEventListener("submit", function(e){
+     document.querySelector(".close").click()
+});  // Number from 0.0 to 1.0
+</script>
