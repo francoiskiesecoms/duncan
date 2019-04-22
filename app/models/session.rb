@@ -2,7 +2,6 @@ class Session < ApplicationRecord
   belongs_to :activity
   has_many :bookings
 
-
   def schedule
     " #{date.strftime("%A %d/%m")} at #{date.strftime("%H:%M")}    \n "
   end
@@ -18,6 +17,4 @@ class Session < ApplicationRecord
   def day
     return date.strftime("%A")
   end
-
 end
-

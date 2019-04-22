@@ -12,4 +12,6 @@ class SessionsController < ApplicationController
     @classes = current_user.completed_classes
   end
 
+
+
 end

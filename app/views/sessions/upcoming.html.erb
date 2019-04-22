@@ -3,9 +3,12 @@
   <div class="tabs">
     <h4><%=link_to"(#{current_user.upcoming_classes.size}) Upcoming", upcoming_classes_path %></h4>
     <h4 class="left deselected"><%=link_to"(#{current_user.completed_classes.size}) Completed", completed_classes_path %></h4>
-
   </div>
+
     <div class="cards">
+    <% if @classes.size == 0 %>
+      <h4 style ="margin-top: 30px;">You have not booked any classes yet</h4>
+    <%end%>
   <% @classes.each do |classe| %>
     <div class="card <%=classe.id%>">
       <div class="info">
