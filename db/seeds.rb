@@ -5,7 +5,6 @@ Activity.delete_all
 Dog.delete_all
 User.delete_all
 
-
 francois = User.create(firstname:"francois",lastname:"kiesecoms", email:"francois@gmail.com", password:"hellohello", password_confirmation: "hellohello" )
 
 chiots = Activity.create!(capicity:20, name:"Education chiots")
