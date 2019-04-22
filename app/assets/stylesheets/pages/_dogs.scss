@@ -1,0 +1,61 @@
+.dogs {
+  display:flex;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  border-radius: 4px;
+  margin-bottom: 15px;
+
+}
+
+.dog_card {
+background-size: cover;
+  width:300px;
+  height:300px;
+  background-position: center ;
+  position:relative;
+  border: 5px solid;
+  border-color: #DFF527;
+                         /* Small radius */
+
+}
+
+.dog_stat {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.dog_info h4 {
+  color:white;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 3px 2px;
+
+}
+
+.dog_info {
+  position:absolute;
+  top:15px;
+  left:15px;
+}
+
+.dog_stat_info{
+  text-align: center;
+}
+
+.photo_btn {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  margin: 10px;
+}
+
+.fa-camera {
+  color:white;
+}
+
+
+

@@ -31,8 +31,8 @@ session_test_8 = Session.create!(date: DateTime.strptime("24-April-19 09:00", "%
 session_test_8 = Session.create!(date: DateTime.strptime("24-May-19 19:00", "%d-%b-%y %H:%M"), activity: balade, participants: 0, place:"La Forêt de Soignes" , coach:"Veronique Pascale" )
 session_test_8 = Session.create!(date: DateTime.strptime("26-April-19 20:00", "%d-%b-%y %H:%M"), activity: balade, participants: 0, place:"La Forêt de Soignes" , coach:"Veronique Pascale" )
 session_test_8 = Session.create!(date: DateTime.strptime("27-April-19 11:00", "%d-%b-%y %H:%M"), activity: balade, participants: 0, place:"La Forêt de Soignes" , coach:"Veronique Pascale" )
-session_test_8 = Session.create!(date: DateTime.strptime("28-May-19 20:00", "%d-%b-%y %H:%M"), activity: balade, participants: 0, place:"La Forêt de Soignes" , coach:"Veronique Pascale" )
-session_test_8 = Session.create!(date: DateTime.strptime("29-April-19 19:00", "%d-%b-%y %H:%M"), activity: balade, participants: 0, place:"La Forêt de Soignes" , coach:"Veronique Pascale" )
-session_test_8 = Session.create!(date: DateTime.strptime("22-May-19 18:00", "%d-%b-%y %H:%M"), activity: balade, participants: 0, place:"La Forêt de Soignes" , coach:"Veronique Pascale" )
+# session_test_8 = Session.create!(date: DateTime.strptime("28-May-19 20:00", "%d-%b-%y %H:%M"), activity: balade, participants: 0, place:"La Forêt de Soignes" , coach:"Veronique Pascale" )
+# session_test_8 = Session.create!(date: DateTime.strptime("29-April-19 19:00", "%d-%b-%y %H:%M"), activity: balade, participants: 0, place:"La Forêt de Soignes" , coach:"Veronique Pascale" )
+# session_test_8 = Session.create!(date: DateTime.strptime("22-May-19 18:00", "%d-%b-%y %H:%M"), activity: balade, participants: 0, place:"La Forêt de Soignes" , coach:"Veronique Pascale" )
 
 
