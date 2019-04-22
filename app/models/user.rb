@@ -16,14 +16,12 @@ class User < ApplicationRecord
     return completed_classes
   end
 
-  # def sessions_to_book
-  #   return Session.this_week.reject do |session|
-  #     bookings.each do |booking|
-
-  #     end
-
-  #   end
-  # end
+  def unbooked_sessions
+    unbooked = Session.all.select do |session|
+      bookings.find_by(session_id: session.id) == nil
+    end
+  return unbooked.select { |session| Date.today <= session.date  && session.date <= (Date.today + 7)}
+  end
 end
 
 

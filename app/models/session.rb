@@ -17,4 +17,6 @@ class Session < ApplicationRecord
   def day
     return date.strftime("%A")
   end
+
+
 end

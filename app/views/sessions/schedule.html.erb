@@ -2,7 +2,7 @@
   <h3>Scheduled classes of this week</h3>
   <button class= 'but book' type="button" data-toggle="modal" data-target="#myModal" >Book a class</button>
   <table>
-  <% Session.this_week.each do |session|%>
+  <% current_user.unbooked_sessions.each do |session|%>
     <tr>
       <td class='bold'> <%= session.date.strftime("%A") %> </td>
       <td class='bold'> <%= session.activity.name %> </td>
@@ -25,14 +25,14 @@
 
     <div class="form-group">
       <%= f.label :class %>
-      <%= f.select(:class, Session.this_week.collect {|session| [session.activity.name + ' ' + session.day + ' at ' + session.hour   , session.id]},{class: 'form-control'}) %>
+      <%= f.select(:class, current_user.unbooked_sessions.collect {|session| [session.activity.name + ' ' + session.day + ' at ' + session.hour   , session.id]},{class: 'form-control'}) %>
     </div>
   <%= f.submit "Book!", class: 'but book' %>
 <% end %>
 </div>
 <div id="myModal" class="modal in confirmation" style ="max-width: 410px;height:400px">
   <button type="button" class="close" data-dismiss="modal">&times;</button>
-  <p>Thanks for you booking</p>
+  <h4 class= "new_booking">Thanks for you booking</h4>
 </div>
 
 <button class= 'but book open' type="button" data-toggle="modal" data-target=".confirmation" style='visibility: hidden;'></button>
@@ -43,6 +43,8 @@
      document.querySelector(".open").click()
 });
 </script>
+
+
 
 
 
