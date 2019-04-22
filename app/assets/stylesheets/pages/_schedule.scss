@@ -5,6 +5,11 @@ td {
   color: rgb(119, 119, 119);
 }
 
+tbody {
+  height: 600px;
+  overflow: scroll;
+}
+
 .bold {
   font-weight: bold;
   color: rgb(0, 0, 0);
@@ -22,7 +27,6 @@ td {
   flex-direction: column;
 
 }
-
 
 .new_booking, .new_dog, .edit_dog {
   width: 300px;

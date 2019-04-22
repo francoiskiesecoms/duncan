@@ -10,7 +10,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
+#home_cards{
+  overflow: initial;
+}
 
 .action {
   background-color: red;
@@ -22,6 +24,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .cards {
   border-top: 3px solid rgb(40, 40, 40);
+  height:600px;
+  overflow: scroll;
 }
 
 .card {
