@@ -20,7 +20,7 @@
 
     <div class="form-group">
       <%= f.label :dog %>
-      <%= f.select(:dog, current_user.dogs.collect {|dog| [dog.name, dog.id]}, {class: 'form-control'})  %>
+      <%= f.select(:dog, current_user.dogs.collect {|dog| [dog.name, dog.id]}, {class: 'form-control dropdown-menu'})  %>
     </div>
 
     <div class="form-group">
