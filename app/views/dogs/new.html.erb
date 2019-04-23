@@ -24,7 +24,7 @@
         <%end%>
         <div class="dog_stat">
           <div class="dog_stat_info">
-            <h4><%=dog.name%>' experience</h4>
+            <h4><%=dog.name%>' s experience</h4>
             <i>based on age and completed classes</i>
           </div>
           <div id="container_<%=dog.id%>" class="stats">
@@ -45,14 +45,24 @@
 </div>
 <div id="myModal" class="modal in" style ="max-width: 410px;height:400px">
   <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <% if @dog.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @dog.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <%= form_for @dog do |f| %>
       <div class="form-group">
         <%= f.label :name%>
-        <%= f.text_field :name%>
+        <%= f.text_field :name, required: true%>
       </div>
       <div class="form-group">
         <%= f.label :date_of_birth%>
-        <%= f.text_field :date_of_birth, :data => {:provide => "datepicker"} , class: 'date-picker form-control' %>
+        <%= f.text_field :date_of_birth, :data => {:provide => "datepicker"},required: true, class: 'date-picker form-control' %>
+        <%= f.text_field :date_of_birth, :data => {:provide => "datepicker"},required: true, class: 'date-picker form-control' %>
       </div>
   <%= f.submit "Add a dog", class: 'but book' %>
 
@@ -60,7 +70,7 @@
 </div>
 
 <script>
-
+    // ajax request and update modal
     document.querySelector(".new_dog").addEventListener("submit", function(e){
      document.querySelector(".close").click()
 });  // Number from 0.0 to 1.0

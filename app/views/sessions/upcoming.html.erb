@@ -33,12 +33,13 @@
 </div>
 
 <script>
-  btn = document.querySelector(".destroy_link")
-  btn.addEventListener("click", function(){
-    console.log("hey")
-    class_id = btn.className.match(/\d+/g).map(Number)[0].toString()
-    child = document.getElementsByClassName(class_id)[0]
-    parent = document.querySelector(".cards")
-    parent.removeChild(child)
+  btns = document.querySelectorAll(".destroy_link")
+  btns.forEach(function(btn) {
+    btn.addEventListener("click", function(){
+      class_id = btn.className.match(/\d+/g).map(Number)[0].toString()
+      child = document.getElementsByClassName(class_id)[0]
+      parent = document.querySelector(".cards")
+      parent.removeChild(child)
+    });
   });
 </script>

@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
 
   def destroy
     Booking.find(params[:id]).destroy
-    redirect_to completed_classes_path
+
   end
 
   private

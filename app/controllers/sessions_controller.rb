@@ -11,7 +11,4 @@ class SessionsController < ApplicationController
   def completed
     @classes = current_user.completed_classes
   end
-
-
-
 end

@@ -8,7 +8,7 @@ class DogsController < ApplicationController
   def create
     @dog = Dog.new
     @dog.name = dog_params["name"]
-    @dog.date_of_birth = Date.strptime(dog_params['date_of_birth'], '%m/%d/%Y')
+    @dog.date_of_birth = Date.strptime(dog_params['date_of_birth'], '%m/%d/%Y') if dog_params['date_of_birth'] != ""
     @dog.user = current_user
     if @dog.save && current_user.dogs.size == 0
       redirect_to dashboard_schedule_path

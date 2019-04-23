@@ -18,5 +18,4 @@ class Session < ApplicationRecord
     return date.strftime("%A")
   end
 
-
 end

@@ -12,14 +12,19 @@
       <p><%=session.schedule %></p>
     </div>
     <div class="action">
-      <%= link_to new_user_registration_path do %>
-        <button type="button" id="open_button">Essayer un cours gratuit</button>
+      <% if user_signed_in? %>
+        <%= link_to dashboard_schedule_path do %>
+          <button type="button" id="open_button">Essayer un cours gratuit</button>
+        <%end%>
+      <% else%>
+        <%= link_to new_user_registration_path do %>
+          <button type="button" id="open_button">Essayer un cours gratuit</button>
+        <%end%>
       <%end%>
     </div>
   </div>
   <% end %>
   </div>
-
   <div id="myModal" class="modal in">
   <div id="myform" class="form-login">
     <div class="header-form">
@@ -35,8 +40,6 @@
   button.addEventListener("click", function(){
 });
 </script>
-
-
 
 
 
